@@ -1,0 +1,30 @@
+{
+    "name": "rc_n4bng5",
+    "description": "One Node Robin cluster-over-RHEL78",
+    "type": "robincluster",
+    "robin_config": {
+        "name": "rc_n4bng5",
+        "robin_user": "robin",
+        "robin_password": "Robin123",
+        "vip": "",
+        "vrid": "",
+        "install_type": "NON-HA",
+        "version": "5.3.3-103",
+        "build_url": "http://[fd02:298c:8dfe:1141::100:1001]:31228/v1/robin",
+        "primary_master": "n4bng5",
+        "secondary_masters": [],
+        "agents": [],
+        "ha_primary_install_args": "\"--ignore-warnings --ip-protocol=ipv6 --enablerepo=staging-base,staging-extrasrpm,staging-server-optional-rpms,staging-server-rh-common-rpms,staging-server-rpms --nics=bond0:1141:untagged \"",
+        "ha_secondary_install_args": "\"--ignore-warnings --ip-protocol=ipv6 --enablerepo=staging-base,staging-extrasrpm,staging-server-optional-rpms,staging-server-rh-common-rpms,staging-server-rpms --nics=bond0:1141:untagged \"",
+        "agent_install_args": "\"--ignore-warnings --ip-protocol=ipv6 --enablerepo=staging-base,staging-extrasrpm,staging-server-optional-rpms,staging-server-rh-common-rpms,staging-server-rpms --nics=bond0:1141:untagged \"",
+        "server_install_args": "\"--ignore-warnings --ip-protocol=ipv6 --enablerepo=staging-base,staging-extrasrpm,staging-server-optional-rpms,staging-server-rh-common-rpms,staging-server-rpms --nics=bond0:1141:untagged \"",
+        "ip_pools": [],
+        "security": {}
+    },
+    "infra": {
+        "n4bng5": {
+            "type": "BM",
+            "elem_uid": "d5e4ec59-2b3d-4925-a3a4-dfb881eaade4"
+        }
+    }
+}

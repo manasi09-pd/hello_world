@@ -1,0 +1,88 @@
+{
+    "name": "n4bng5",
+    "description": "n4bng5-RHEL-78",
+    "type": "BM",
+    "sshconfig": {
+        "sshhost": "fd02:298c:8dfe:1140::9001:1012",
+        "username": "root",
+        "password": "root"
+    },
+    "bmcconfig": {
+        "bmchost": "fd02:298c:8dfe:307:b6a9:fcff:fe44:a9d3",
+        "username": "robin",
+        "password": "Robin123"
+    },
+    "config": {
+        "rcp": {
+            "ver": "v0.4",
+            "rev": "0.4.2",
+            "workload": "epa2"
+        },
+        "artifactory": {
+            "repo_url": "http://[fd02:298c:8dfe:1141:5e30:8e48:f95e:d657]/repo/Early-Releases",
+            "os_repo_url": "http://[fd02:298c:8dfe:1141:5e30:8e48:f95e:d657]/repo/Early-Releases/v0.4/repo/rmp/0.4.2/rhel/epa2/os/x86_64/",
+            "bmaas_artifactory_url": "http://[fd02:298c:8dfe:1141::100:1001]:31228/v1/bmaas/v0.4/bmaas/0.4.2/",
+            "bmaas_hostrepo_url": "http://[fd02:298c:8dfe:1141::100:1001]:31228/v1/bmaas/v0.4/bmaas/0.4.2/"
+        },
+        "os": {
+            "hostname": "n4bng5",
+            "hostdomain": "rma.lan",
+            "ip": "fd02:298c:8dfe:1141::9001:1012",
+            "gateway": "fd02:298c:8dfe:1141:eaf7:24ff:fe9d:3e60",
+            "root_password": "$6$FzgEdgpk2WkJvlMl$QuS4KI5hyscUDLwwSBzphPk.m1Sh46a9.ZYi1lo6qm3VxeozLfF//vvgATbWBjuckJ/5MopdNBflxMKKg4FZ11",
+            "cloud_password": "$6$FzgEdgpk2WkJvlMl$QuS4KI5hyscUDLwwSBzphPk.m1Sh46a9.ZYi1lo6qm3VxeozLfF//vvgATbWBjuckJ/5MopdNBflxMKKg4FZ11",
+            "dns": [
+                "fd02:298c:8dfe:100::14"
+            ],
+            "searchdomain": [
+                "rma.lan"
+            ],
+            "ntp": [
+                "fd02:298c:8dfe:100:2c8:8bff:fe99:d1fc"
+            ],
+            "sriov_mac_list": [
+                "b4:a9:fc:44:a9:d4",
+                "b4:a9:fc:44:a9:d5",
+                "b4:a9:fc:44:a9:d4",
+                "b4:a9:fc:44:a9:d5"
+            ],
+            "ocp_mac_list": [],
+            "fpga_mac_list": [
+                "64:4c:36:10:66:0c",
+                "64:4c:36:10:66:0d",
+                "64:4c:36:10:66:08",
+                "64:4c:36:10:66:09",
+                "64:4c:36:10:66:0c",
+                "64:4c:36:10:66:0d",
+                "64:4c:36:10:66:08",
+                "64:4c:36:10:66:09"
+            ]
+        },
+        "network": {
+            "bondinterface": {
+                "opts": "normal",
+                "ip": "fd02:298c:8dfe:1141::9001:1012",
+                "name": "bond0"
+            },
+            "vlaninterface": {
+                "gw": "fd02:298c:8dfe:1140:eaf7:24ff:fe9d:3e60",
+                "ip": "fd02:298c:8dfe:1140::9001:1012",
+                "name": "bond0.1140"
+            }
+        },
+        "kickstart_url": "http://[fd02:298c:8dfe:1141:5e30:8e48:f95e:d657]/repo/Early-Releases/v0.4/bmaas/0.4.2/ks/1.2.2-2/ks.cfg",
+        "ks_script": {
+            "ver": "1.2.2-2",
+            "pre": "pre-basic.sh",
+            "post": "post-basic.sh"
+        },
+        "flavor": {
+            "os": "rhel",
+            "fwup": "enabled",
+            "nic_driver": "enabled",
+            "sriov": "disabled",
+            "vcu": "disabled",
+            "vdu": "enabled"
+        }
+    }
+}
